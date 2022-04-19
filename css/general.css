@@ -1,0 +1,248 @@
+/*
+-- 01 TYPOGRAPHY SYSTEM
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+Font weights 
+Default: 400
+medium: 500
+semi-bold:600
+bold:700
+
+-Line heights
+Default: 1
+small: 1.05
+1.2
+paragraph default: 1.6
+
+-letter spacing
+0.75px
+0.5px
+
+--02 COLORS
+-Primary: #e67e22;
+-Tints: #fdf2e9;
+#fae5d3
+-Shades: #cf711f;
+-Accents:
+-Greys
+#6f6f6f - (lightest grey allowed on #fdf2e9)
+#555
+#333
+#888
+
+-- 05 SHADOWS
+
+--06 BORDER-RADIUS
+default: 9px;
+100px
+
+--07  WHITESPACE
+
+-spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/* reusable systems created  using classes
+- reusable grid system
+- center component */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* percentage of user's browser font-size setting */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+
+/* ---------------------- */
+/* GENERAL REUSABLE COMPONENTS */
+/* -------------------------- */
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+
+  /* this applies to the next line and the grid: last-child, the grid last child is to apply the css rule to only grid last child of section with more than one grid, so margin 9.6rem isn't apply to all grids except sections with two grids, which margin 9.6rem is applied to first child and not the last child  or  for better clean code to avoid repetition of the margin-b 9.6rem in all grid styles in my section, I use
+  grid:not(:last-child) i.e this style applies to grid which are not last childs
+  */
+
+  /* margin-bottom: 9.6rem; */
+}
+
+/* .grid:last-child {
+  margin-bottom: 0;
+} */
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid0--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* to vertically center grid-items in a grid container */
+.grid--center-v {
+  align-items: center;
+}
+
+.subheading {
+  display: block;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #333;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  margin-bottom: 3.2rem;
+  line-height: 1.05;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+/* CTA BUTTONS */
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: 1.6rem 3.2rem; /* padding left and right should be *2 of padding top and bottom */
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  border-radius: 9px;
+  transition: all 0.3s; /* animation are placed on the initial state of the element */
+}
+
+.btn-full:link,
+.btn-full:visited {
+  background-color: #e67e22;
+  color: white;
+}
+
+.btn-outline:link,
+.btn-outline:visited {
+  background-color: #fff;
+  color: #555;
+}
+
+.btn-full:hover,
+.btn-full:active {
+  background-color: #cf711f;
+}
+
+.btn-outline:hover,
+.btn-outline:active {
+  background-color: #fdf2e9;
+
+  /* trick to add border inside */
+  box-shadow: inset 0 0 0 3px #fff; /* if border was used here, the elements above will slightly jump up, hence i used box-shadow */
+}
+
+.link:link,
+.link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #e67e22;
+  /* currentColor means the actual color associated with this selector, it applies to active and hover as well */
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: all 0.3sec;
+}
+
+.link:hover,
+.link:active {
+  color: #cf711f;
+  border: 1px solid transparent;
+  /* if border: none was use, anytime we hover, the page jumps by 1px, because it is present at the initial state above but not here hence we use "transparent" */
+}
+
+.list {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-item {
+  font-size: 1.8rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.list-icon {
+  color: #e67e22;
+  height: 3rem;
+  width: 3rem;
+}
+
+/* ============= */
+/* HELPER CLASSES */
+/* ============= */
+
+.margin-right-sm {
+  margin-right: 2rem !important;
+}
+
+.margin-bottom-md {
+  margin-bottom: 5.2rem !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+strong {
+  font-weight: 500;
+}
