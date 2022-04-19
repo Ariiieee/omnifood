@@ -495,7 +495,7 @@
 /* CALL TO ACTION SECTION*/
 /* ======================= */
 
-/* .section-cta {
+.section-cta {
   padding: 9.6rem 0;
 }
 
@@ -503,4 +503,8 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   background-color: #cf711f;
-} */
+  border-radius: 11px;
+
+  /* temporary height */
+  height: 50rem;
+}
