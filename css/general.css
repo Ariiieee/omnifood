@@ -23,6 +23,9 @@ paragraph default: 1.6
 -Primary: #e67e22;
 -Tints: #fdf2e9;
 #fae5d3
+#eb984e
+
+
 -Shades: #cf711f;
 -Accents:
 -Greys
@@ -36,6 +39,7 @@ paragraph default: 1.6
 --06 BORDER-RADIUS
 default: 9px;
 100px
+11px
 
 --07  WHITESPACE
 
