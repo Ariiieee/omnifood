@@ -505,9 +505,9 @@
   background-color: #cf711f;
   border-radius: 11px;
   background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
-  /* temporary height */
-  height: 50rem;
   overflow: hidden;
+  /* temporary height below is removed, because I want the content of the form to dictate the height*/
+  /* height: 50rem; */
 }
 
 .cta-text-box {
@@ -559,7 +559,7 @@
 }
 
 .cta-image-box {
-  /*styling an img directly  on the css file - like "url("img/eating.jpg")- this won't work because we are on the css folder and there is no img folder in the css folder(like the case of index.html which access to the img folder directly), so to access the img folder, we go one level up directly to the root and get access to the img folder, note code below */
+  /*styling an img directly  on the css file - like "url("img/eating.jpg")- this won't work because we are on the css folder and there is no img folder in the css folder(like the case of index.html which has access to the img folder directly), so to access the img folder, we go one level up directly to the root and get access to the img folder, note code below */
   /* I also added an overlay to the image, using the linear gradient and setting the colors on the linear gradient transparent for the image to be vivid */
   background-image: linear-gradient(
       to right bottom,
@@ -569,4 +569,16 @@
     url("../img/eating.jpg");
   background-size: cover;
   background-position: center;
+}
+
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(250, 229, 211, 0.5);
+}
+
+/* ======================== */
+/* FOOTER */
+/* ======================= */
+.footer {
+  padding: 9.6rem 0;
 }

@@ -27,6 +27,7 @@ paragraph default: 1.6
 
 
 -Shades: #cf711f;
+#45260a;
 -Accents:
 -Greys
 #6f6f6f - (lightest grey allowed on #fdf2e9)
@@ -109,8 +110,12 @@ body {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.grid0--4-cols {
+.grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 /* to vertically center grid-items in a grid container */
@@ -197,6 +202,19 @@ body {
   box-shadow: inset 0 0 0 3px #fff; /* if border was used here, the elements above will slightly jump up, hence i used box-shadow */
 }
 
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  /* this button is a grid item (from the html), therefore it stretched to occupy the whole grid hence, it's outstretched, to fix this:border: we align the grid item only to the end; now it takes padding of the actual btn */
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
+}
+
 .link:link,
 .link:visited {
   display: inline-block;
@@ -237,6 +255,11 @@ body {
   width: 3rem;
 }
 
+/* focus state on buttons,(i.e, the blue outline in your input field */
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
 /* ============= */
 /* HELPER CLASSES */
 /* ============= */

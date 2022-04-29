@@ -30,7 +30,9 @@
   <body>
     <main>
       <header class="header">
-        <img class="logo" alt="omnifood-logo" src="./img/omnifood-logo.png" />
+        <a href="#">
+          <img class="logo" alt="omnifood-logo" src="./img/omnifood-logo.png" />
+        </a>
         <nav class="main-nav">
           <ul class="main-nav_list">
             <li><a href="#" class="main-nav_link">Section1</a></li>
@@ -539,7 +541,7 @@
           </aside>
         </div>
 
-        <div class="container grid grid0--4-cols">
+        <div class="container grid grid--4-cols">
           <div class="feature">
             <ion-icon class="feature-icon" name="infinite-outline"></ion-icon>
             <p class="feature-title">Never cook again</p>
@@ -613,7 +615,7 @@
                     <option value="others">Others</option>
                   </select>
                </div>     
-               <button class="btn">Sign up now</button>
+               <button class="btn btn--form">Sign up now</button>
               </form>
             </div>
             <!--the div below has no content and so i considered screen readers, so it shouldn't be blank, we use the role attribute and describe it with the aria-label, these attributes are all about accessibility -->
@@ -626,6 +628,75 @@
         </div>
       </section>
     </main>
+
+      <!--------------------------- -->
+      <!---FOOTER -->
+      <!---------------------------->
+
+    <footer class="footer">
+      <div class="container grid grid--5-cols">
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <img class="logo" alt="omnifood-logo" src="./img/omnifood-logo.png" />
+          </a>
+
+          <p class="copyright">copyright &copy; 2027 by Omnifood, Inc. All right reserved.</p>
+        </div>
+        <div class="address-col">
+          <p class="footer-heading">Contact us</p>
+          <address class="contacts">
+            <p> 623 Harrison St., 2nd Floor, San Francisco, CA 94107</p>
+            <p>
+              <a href="tel:415-201-6370">415-201-6370</a><br />
+              <a href="mail: hello@omnifood.com">hello@omnifood.com</a>
+            </p>
+          </address>
+        </div>
+
+        <div class="nav-col">
+          <p class="footer-heading">
+            Account
+          </p>
+          <ul class="footer-nav">
+            <li><a href="#">Create account</a></li>
+            <li><a href="#">Sign in</a></li>
+            <li><a href="#">iOS app</a></li>
+            <li><a href="#">Android app</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-col">
+          <p class="footer-heading">
+            Account
+          </p>
+          <ul class="footer-nav">
+            <li><a href="#">About Omnifood</a></li>
+            <li><a href="#">For Business</a></li>
+            <li><a href="#">Cooking partners</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+          
+
+
+
+
+
+        </div>
+        <div class="nav-col">
+          <p class="footer-heading">
+            Account
+          </p>
+          <ul class="footer-nav">
+            <li><a href="#">Recipe directory</a></li>
+            <li><a href="#">Help center</a></li>
+            <li><a href="#">Privacy & terms</a></li>
+       
+          </ul>
+        </div>
+
+  
+      </div>
+    </footer>
   </body>
 </html>
 
