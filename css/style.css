@@ -496,7 +496,8 @@
 /* ======================= */
 
 .section-cta {
-  padding: 9.6rem 0;
+  padding: 4.8rem 0 12.8rem 0;
+  /* nb -- I added the padding of 12.8rem, because I want the  the line between the footer section and the cta section to be in the middle (previously it was just padding: 9.6rem 0) */
 }
 
 .cta {
@@ -580,5 +581,78 @@
 /* FOOTER */
 /* ======================= */
 .footer {
-  padding: 9.6rem 0;
+  padding: 12.8rem 0;
+  /*  i added more padding to the section of the footer to distinguish the footer section from other sections of my webpage */
+  border-top: 1px solid #eee;
+}
+
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+/*to push the copyright content to the bottom to align with the footer links, I had tto set the container that houses copyright to display flex and give copyright class: margin-top: auto */
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: block; /* because links are inline elements */
+  margin-bottom: 2.4rem;
+}
+
+.social-links {
+  list-style: none;
+
+  display: flex;
+  gap: 2.4rem;
+}
+
+.social-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: #767676;
+  margin-top: auto;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
+
+.address {
+  margin-bottom: 2.4rem;
+}
+
+.footer-nav {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
 }
