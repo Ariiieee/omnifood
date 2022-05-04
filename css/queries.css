@@ -1,0 +1,16 @@
+/* don't use px for media queries, also when building web pages */
+/* rem and em do not depend on html font size in media queries !
+instead 1em = 1rem = 16px */
+/* due to bugs in other browsers, rem is not advised to be used in media queries, hence i use em */
+
+/* take note that, i am using some specific good breakpoints conbined with breakpoints when tge design breaks */
+
+/*===================================-*/
+/*BELOW 1344PX/16px = 84em {Smaller desktops */
+/*===================================*/
+
+@media screen and (max-width: 84em) {
+  .hero-grid {
+    max-width: 120rem;
+  }
+}
