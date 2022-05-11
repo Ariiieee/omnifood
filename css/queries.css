@@ -5,12 +5,63 @@ instead 1em = 1rem = 16px */
 
 /* take note that, i am using some specific good breakpoints conbined with breakpoints when tge design breaks */
 
+/* do not have too many media queries */
+
+/* using  desktop approach first, then creating media queries from the top (desktop screens to mobile screens), max-width is used,
+**using the mobile first approach, then creating media queries for larger screens, min-width is used */
+
+/*nb- I am setting breakpoints when the design breaks 
+** in responsive design, we change fonts, spacing and reduce elements that are large to fix the appropriate screen sizes
+*/
+
 /*===================================-*/
 /*BELOW 1344PX/16px = 84em {Smaller desktops */
 /*===================================*/
 
-@media screen and (max-width: 84em) {
+@media (max-width: 84em) {
   .hero-grid {
     max-width: 120rem;
+  }
+
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* - Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+
+/*===================================-*/
+/*BELOW 1200X/16px = 75em {landscape(Tablets) */
+/*===================================*/
+@media (max-width: 75em) {
+  html {
+    /* 9px/16px x 100% */
+    font-size: 56.25%;
+  }
+
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .hero-grid {
+    gap: 4.8rem;
   }
 }
