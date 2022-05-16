@@ -136,4 +136,44 @@ instead 1em = 1rem = 16px */
   .btn--form {
     margin-top: 1.2rem;
   }
+
+  /* MOBILE NAVIGATION */
+  .btn-mobile-nav {
+    display: block;
+  }
+
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.97);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* takes full width  */
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+
+    /* hide navigation at this media query until menu button is clicked */
+    /* display: none; */ /* used on an element does not allow transitions and animations(transitions and animations won't work ---- so  instead i use opacity */
+    /* to hide a navigation without the use of display: none */
+
+    /* 1) hide visually */
+    opacity: 0;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+  }
+
+  .main-nav_list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav_link:link,
+  .main-nav_link:visited {
+    font-size: 3rem;
+  }
 }
