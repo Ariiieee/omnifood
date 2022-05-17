@@ -81,6 +81,7 @@ instead 1em = 1rem = 16px */
 /*===================================*/
 @media (max-width: 60em) {
   html {
+    /* 8px/16px x 100% */
     font-size: 50%;
   }
 
@@ -149,22 +150,42 @@ instead 1em = 1rem = 16px */
     left: 0;
     width: 100%; /* takes full width  */
     height: 100vh;
+    /* animate the nav menu to slide in to the web page */
+    /* nb-- for smooth transition, use transform property, setting values to left or right do not give smooth transition */
+    transform: translateX(100%);
 
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.5s;
+    transition: all 0.5s ease-in;
 
     /* hide navigation at this media query until menu button is clicked */
-    /* display: none; */ /* used on an element does not allow transitions and animations(transitions and animations won't work ---- so  instead i use opacity */
-    /* to hide a navigation without the use of display: none */
+    /* display: none; */ /* when used on an element does not allow transitions and animations(transitions and animations won't work ---- so  instead i used opacity */
+    /* to hide a navigation(element) without the use of display: none */
 
     /* 1) hide visually */
     opacity: 0;
+
+    /* 2) make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: none;
   }
 
   .nav-open .main-nav {
     opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
   }
 
   .main-nav_list {
@@ -176,4 +197,10 @@ instead 1em = 1rem = 16px */
   .main-nav_link:visited {
     font-size: 3rem;
   }
+}
+
+/*===================================-*/
+/*BELOW 760X/16px = 48em (smaller Tablets) */
+/*===================================*/
+@media (max-width: 48em) {
 }
