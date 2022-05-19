@@ -203,4 +203,38 @@ instead 1em = 1rem = 16px */
 /*BELOW 760X/16px = 48em (smaller Tablets) */
 /*===================================*/
 @media (max-width: 48em) {
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .diets {
+    /* to place this grid item in the center, I had to span this grid item across two grid cells */
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+
+  .pricing-plan {
+    width: 100%;
+  }
+
+  .grid--footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .logo-col,
+  .address-col {
+    grid-column: span 3;
+  }
+
+  .nav-col {
+    /* this placed the grid items below at the top mandatorily */
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
 }
+
+/*===================================-*/
+/*BELOW 580pX/16px = 36em (phones) */
+/*===================================*/
