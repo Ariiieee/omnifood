@@ -238,3 +238,60 @@ instead 1em = 1rem = 16px */
 /*===================================-*/
 /*BELOW 580pX/16px = 36em (phones) */
 /*===================================*/
+@media (max-width: 36em) {
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: 1fr;
+  }
+
+  /* in mobile phone, buttons has to be big enough so we can tap on it */
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 1.4rem;
+  }
+
+  .section-hero {
+    padding: 2.8rem 0 6.2rem 0;
+  }
+
+  .hero-grid {
+    padding: 0 3.2rem;
+  }
+
+  .hero-img {
+    width: 80%;
+  }
+
+  .logos img {
+    height: 1.2rem;
+  }
+
+  .step-img-box:nth-child(2) {
+    /* the nth-child(2) points to the second child to the over all div that is wrapping the step-text-box and the step-image-box */
+    grid-row: 1;
+  }
+
+  .step-img-box:nth-child(6) {
+    grid-row: 5;
+  }
+
+  .step-img-box {
+    /* to move the phone image down a bit close to its content */
+    transform: translateY(2.4rem);
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+  }
+
+  .cta {
+    grid-template-columns: 1fr;
+  }
+}

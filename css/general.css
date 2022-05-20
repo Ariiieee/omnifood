@@ -92,7 +92,7 @@ body {
   row-gap: 9.6rem;
 
   /* this applies to the next line and the grid: last-child, the grid last child is to apply the css rule to only grid last child of section with more than one grid, so margin 9.6rem isn't apply to all grids except sections with two grids, which margin 9.6rem is applied to first child and not the last child  or  for better clean code to avoid repetition of the margin-b 9.6rem in all grid styles in my section, I use
-  grid:not(:last-child) i.e this style applies to grid which are not last childs
+  grid:not(:last-child) i.e this style applies to grid which are not last child's
   */
 
   /* margin-bottom: 9.6rem; */
