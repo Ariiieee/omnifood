@@ -66,6 +66,12 @@ html {
   /* percentage of user's browser font-size setting */
   font-size: 62.5%;
   overflow-x: hidden; /* does not enables scrolling horizontally */
+
+  /* smooth scrolling on the webpage */
+  /* smooth scrolling animation does not work in safari and microsoft edge 
+  scroll-behavior: smooth;
+  hence I use js to make smooth sceolling animation work on all browsers
+   */
 }
 
 body {
