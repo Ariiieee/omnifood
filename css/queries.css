@@ -294,4 +294,14 @@ instead 1em = 1rem = 16px */
   .cta {
     grid-template-columns: 1fr;
   }
+
+  .cta-text-box {
+    padding: 3.2rem;
+  }
+
+  /* nb-- the image at the cta image box, was set directly on css and not on html(hence why it wasn't initially displayed )), hence the image wasn't displayed when I got to this screen size initially, to fix this, I had to set height to the image at the media query */
+  .cta-image-box {
+    height: 32rem;
+    grid-row: 1;
+  }
 }
