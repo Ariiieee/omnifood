@@ -41,6 +41,29 @@ allLinks.forEach(function (link) {
   });
 });
 
+////////////////////////////////////////////////////////
+//sticky Navigation
+// the sticky navigation should be sticky when the section hero moves out of the viewport
+const sectionHeroEl = document.querySelector(".section-hero");
+//the intersectionObserver has two parameters i.e -- the function and an options (object)
+const observer = new IntersectionObserver(
+  function (entries) {
+    //nb-- we get access to array of entries, and there is one entry for each threshold value
+    //nb-- the entries array is a collection of multiple elements but in this case we have one which is the threshold
+    const ent = entries[0]; //the element number one(i.e threshold) is 0 in js in relation to the first and only element here in entries
+    console.log(ent);
+    if (ent.isIntersecting === false) {
+      document.body.classList.add("sticky");
+    }
+  },
+  {
+    //in the viewport
+    root: null, //the root is where the element should be appearing or not //null --means we will observe the element as it move through the viewport
+    threshold: 0, //this means we will have an event as soon as 0% of the hero section is inside the viewport
+  }
+);
+observer.observe(sectionHeroEl); //we want to observe the element that moves out of the viewport, then comes the sticky navigation -- which is the hero section
+
 /////////////////////////////////////////////////////////
 
 // Fixing flexbox gap property missing in some Safari versions
