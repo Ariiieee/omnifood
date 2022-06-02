@@ -144,3 +144,9 @@ checkFlexGap();
   }
 }
 */
+
+//nb: testing with light houe tool
+//light house tool is used to improve the quality of our web pages
+//lighthouse is in dev tools
+//need to test the website when it is deployed, when loading from your local computer, it's very fast
+//use contrast checker to check for color contrast to see if it should be changed
