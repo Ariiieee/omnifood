@@ -55,11 +55,17 @@ const observer = new IntersectionObserver(
     if (ent.isIntersecting === false) {
       document.body.classList.add("sticky");
     }
+    //remove sticky navigation when section hero is inside the viewport
+    if (ent.isIntersecting === true) {
+      document.body.classList.remove("sticky");
+    }
   },
   {
     //in the viewport
     root: null, //the root is where the element should be appearing or not //null --means we will observe the element as it move through the viewport
     threshold: 0, //this means we will have an event as soon as 0% of the hero section is inside the viewport
+    //I want the sticky navigation to kick in almost when the section hero is out of the viewport to avoid overlapping the content in the next section
+    rootMargin: "-80px", //80px is the height of the sticker navigation converted to px (rem or % won't work if used here), the rootMargin is applied outside the root
   }
 );
 observer.observe(sectionHeroEl); //we want to observe the element that moves out of the viewport, then comes the sticky navigation -- which is the hero section
