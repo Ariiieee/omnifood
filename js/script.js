@@ -145,8 +145,15 @@ checkFlexGap();
 }
 */
 
-//nb: testing with light houe tool
+//nb: testing with light house tool
 //light house tool is used to improve the quality of our web pages
 //lighthouse is in dev tools
 //need to test the website when it is deployed, when loading from your local computer, it's very fast
 //use contrast checker to check for color contrast to see if it should be changed
+
+//image optimization
+// to optimize images, the actual image has to be 2x the image displayed in our design to do this
+// use the same technique used to resize the favicon -- resizing the image -- rendered size must be 2x intrinsic size, (using dev-tools to check the image when i hover on top of it), nb--rendered size is always approximated to be half of intrinsic size
+
+// tool used to compress images -- squoosh.app -use webp image format
+//check if webp is supported in browsers

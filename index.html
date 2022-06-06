@@ -115,11 +115,23 @@
           </div>
 
           <div class="hero-img-box">
-            <img
+            <!-- broswer will select which image will display first as webp isn't supported in IE  -->
+            <picture>
+              <source srcset="img/hero.webp" type="image/webp" />
+              <source srcset="img/hero-min.png" type="image/png" />
+            </picture>
+            <!-- <img
               src="img/hero.png"
               class="hero-img"
               alt="woman enjoying a meal, meals in storage container and food bowls on a table"
-            />
+            /> -->
+            
+            <!-- optimized hero image -->
+            <img
+            src="img/hero.webp"
+            class="hero-img"
+            alt="woman enjoying a meal, meals in storage container and food bowls on a table"
+          />
           </div>
         </div>
       </section>
